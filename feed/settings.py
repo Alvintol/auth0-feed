@@ -125,3 +125,20 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'feedapp.User'
+
+# Auth0 Settings
+
+SOCIAL_AUTH_TRAILING_SLASH = False
+SOCIAL_AUTH_AUTH0_DOMAIN = 'dev-p0fde3zs.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = 'O6YCUbGRJFgX8YFVDtGjWtkRHN6P21Kl'
+SOCIAL_AUTH_AUTH0_SECRET = '_02WmcII03zizKOZtlEKprLHegI2uUeo9JuUt1-dsEfFbQ_Qw09Sw4ftONtOMfuw'
+SOCIAL_AUTH_AUTH0_SCOPE = ['openid', 'profile', 'email']
+
+AUTHENTICATION_BACKENDS = {
+    'social_core.backends.auth0.Auth0Auth2',
+    'django.contrib.auth.backends.ModelBackend',
+}
+
+LOGIN_URL = '/login/auth0'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
