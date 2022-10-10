@@ -135,7 +135,7 @@ SOCIAL_AUTH_AUTH0_SECRET = '_02WmcII03zizKOZtlEKprLHegI2uUeo9JuUt1-dsEfFbQ_Qw09S
 SOCIAL_AUTH_AUTH0_SCOPE = ['openid', 'profile', 'email']
 
 AUTHENTICATION_BACKENDS = {
-    'social_core.backends.auth0.Auth0Auth2',
+    'social_core.backends.auth0.Auth0OAuth2',
     'django.contrib.auth.backends.ModelBackend',
 }
 
